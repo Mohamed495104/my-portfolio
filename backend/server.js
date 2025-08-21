@@ -5,27 +5,58 @@ import cors from "cors";
 import Contact from "./models/Contact.js";
 
 dotenv.config();
-
 const app = express();
-app.use(cors());
+
+//  Configure CORS properly
+const allowedOrigins = [
+  process.env.FRONTEND_URL || "http://localhost:5173"
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
-// connect MongoDB
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB Connected"))
-    .catch(err => console.error("MongoDB connection error:", err));
+//  Connect to MongoDB
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// contact route
+// Contact Route
 app.post("/api/contact", async (req, res) => {
-    try {
-        const { name, email, message } = req.body;
-        const contact = new Contact({ name, email, message });
-        await contact.save();
-        res.status(201).json({ success: true, msg: "Message sent successfully!" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, msg: "Error sending message" });
+  try {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ success: false, msg: "All fields required" });
     }
+
+    const contact = new Contact({ name, email, message });
+    await contact.save();
+
+    res.status(201).json({ success: true, msg: "Message sent successfully!" });
+  } catch (error) {
+    console.error("Contact API Error:", error);
+    res.status(500).json({ success: false, msg: "Error sending message" });
+  }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+// Root Route
+app.get("/", (req, res) => {
+  res.send("🚀 Portfolio Backend is running!");
+});
+
+//  Dynamic Port for Render/Heroku
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
