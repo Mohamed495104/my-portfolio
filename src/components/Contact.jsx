@@ -25,7 +25,7 @@ function Contact() {
         setStatus("");
 
         try {
-            const res = await axios.post("http://localhost:5000/api/contact", formData);
+            const res = await axios.post("https://my-portfolio-backend-mauve.vercel.app/api/contact", formData);
             setStatus(res.data.msg || "Message sent successfully!");
             setFormData({ name: "", email: "", message: "" });
         } catch (error) {
