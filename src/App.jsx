@@ -1,5 +1,5 @@
 import React from "react";
-import { Analytics } from "@vercel/analytics/next"
+import { inject } from '@vercel/analytics';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -13,6 +13,7 @@ import Contact from "./components/Contact.jsx";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer.jsx";
 import ProjectDetails from "./components/ProjectDetails.jsx";
+inject();
 function App() {
     return (
         <Router>
@@ -38,8 +39,8 @@ function App() {
                 {/* Project Details Page */}
                 <Route path="/projects/:id" element={<ProjectDetails />} />
             </Routes>
-            <Analytics />
         </Router>
+
     );
 }
 
