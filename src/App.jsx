@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/next"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -37,6 +38,7 @@ function App() {
                 {/* Project Details Page */}
                 <Route path="/projects/:id" element={<ProjectDetails />} />
             </Routes>
+            <Analytics />
         </Router>
     );
 }
