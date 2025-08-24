@@ -1,22 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link, scroller } from "react-scroll";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false); // 👈 track mobile menu state
     const location = useLocation();
+    const navigate = useNavigate();
 
-    // Check if we're on a project details page
-    const isProjectDetailsPage = location.pathname.startsWith('/projects/');
+    const isProjectDetailsPage = location.pathname.startsWith("/projects/");
 
     useEffect(() => {
         const handleScroll = () => {
-            const isScrolled = window.scrollY > 50;
-            setScrolled(isScrolled);
+            setScrolled(window.scrollY > 50);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Back to projects handler
+    const handleBackToProjects = () => {
+        navigate("/", { state: { scrollTo: "projects" } });
+        setMenuOpen(false); // close menu if open
+    };
+
+    // Close menu helper
+    const handleNavClick = (scrollTarget) => {
+        if (scrollTarget) {
+            scroller.scrollTo(scrollTarget, {
+                smooth: true,
+                duration: 200,
+                offset: -80,
+            });
+        }
+        setMenuOpen(false); // close menu after click
+    };
 
     return (
         <nav
@@ -30,6 +48,7 @@ function Header() {
                     <RouterLink
                         to="/"
                         className="navbar-brand"
+                        onClick={() => setMenuOpen(false)}
                     >
                         <span className="brand-text">Mohamed Ijas</span>
                         <div className="brand-underline"></div>
@@ -38,11 +57,12 @@ function Header() {
                     <Link
                         to="intro"
                         smooth={true}
-                        duration={500}
+                        duration={200}
                         spy={true}
                         offset={-80}
                         activeClass="active"
                         className="navbar-brand"
+                        onClick={() => handleNavClick("intro")}
                     >
                         <span className="brand-text">Mohamed Ijas</span>
                         <div className="brand-underline"></div>
@@ -53,10 +73,9 @@ function Header() {
                 <button
                     className="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    onClick={() => setMenuOpen(!menuOpen)}
                     aria-controls="navbarNav"
-                    aria-expanded="false"
+                    aria-expanded={menuOpen}
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-line"></span>
@@ -65,45 +84,51 @@ function Header() {
                 </button>
 
                 {/* Navigation */}
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div
+                    className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
+                    id="navbarNav"
+                >
                     <ul className="navbar-nav ms-auto align-items-center">
                         {isProjectDetailsPage ? (
-                            // Show Back to Projects when on project details page
                             <li className="nav-item">
-                                <RouterLink
-                                    to="/#projects"
-                                    className="nav-link back-to-projects"
+                                <button
+                                    onClick={handleBackToProjects}
+                                    className="nav-link back-to-projects btn btn-link"
+                                    style={{ cursor: "pointer" }}
                                 >
                                     <i className="bi bi-arrow-left me-2"></i>
                                     Back to Projects
-                                </RouterLink>
+                                </button>
                             </li>
                         ) : (
-                            // Show normal navigation when on home page
-                            ["intro", "about", "timeline", "projects", "skills", "contact"].map((section) => (
-                                <li className="nav-item" key={section}>
-                                    <Link
-                                        to={section}
-                                        smooth={true}
-                                        duration={500}
-                                        spy={true}
-                                        offset={-80}
-                                        activeClass="nav-active"
-                                        className="nav-link"
-                                    >
-                                        <span className="nav-text">
-                                            {section.charAt(0).toUpperCase() + section.slice(1)}
-                                        </span>
-                                        <div className="nav-indicator"></div>
-                                    </Link>
-                                </li>
-                            ))
+                            ["intro", "about", "timeline", "projects", "skills", "contact"].map(
+                                (section) => (
+                                    <li className="nav-item" key={section}>
+                                        <Link
+                                            to={section}
+                                            smooth={true}
+                                            duration={200}
+                                            spy={true}
+                                            offset={-80}
+                                            activeClass="nav-active"
+                                            className="nav-link"
+                                            onClick={() => handleNavClick(section)} // 👈 closes after click
+                                        >
+                                            <span className="nav-text">
+                                                {section.charAt(0).toUpperCase() + section.slice(1)}
+                                            </span>
+                                            <div className="nav-indicator"></div>
+                                        </Link>
+                                    </li>
+                                )
+                            )
                         )}
                         <li className="nav-item">
                             <a
                                 href="/resume.pdf"
                                 target="_blank"
                                 className="btn nav-resume-btn"
+                                onClick={() => setMenuOpen(false)} // 👈 closes on click
                             >
                                 <span>Resume</span>
                                 <i className="bi bi-eye ms-2"></i>

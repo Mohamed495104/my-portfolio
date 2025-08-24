@@ -16,7 +16,7 @@ body {
 }
 
 section {
-    background: transparent; /* ✅ inherit unified background */
+    background: transparent;
 }
 
 /* =========================
@@ -627,7 +627,6 @@ section {
 }
 
 
-
 /* About Description */
 .about-text-wrapper {
     animation: fadeIn 1s ease-out 0.3s both;
@@ -660,7 +659,6 @@ section {
             0 0 0 1px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
-
 
 
 .about-profile-img:hover {
@@ -1028,7 +1026,7 @@ section {
     }
 }
 
-/* Section Title Styles (matching About section) */
+/* Section Title Styles */
 .section-title {
     font-size: 3.5rem;
     font-weight: 800;
@@ -1175,7 +1173,6 @@ section {
     left: -2px;
     right: -2px;
     bottom: -2px;
-
     border-radius: 22px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1695,7 +1692,6 @@ section {
 }
 
 
-
 /* =========================
    Badges
    ========================= */
@@ -1717,8 +1713,75 @@ section {
     color: #fff;
 }
 
+/* Project Tabs Styling */
+.project-tabs .nav-link {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px 24px;
+    margin: 0 8px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
 
-/* ===== CURRENTLY LEARNING SECTION STYLES ===== */
+.project-tabs .nav-link:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-tabs .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+.project-tabs .nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Carousel controls */
+.carousel-control-custom {
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev-custom {
+    left: -60px;
+}
+
+.carousel-control-next-custom {
+    right: -60px;
+}
+
+/* Ensure proper spacing */
+.project-tabs-wrapper {
+    z-index: 20;
+    position: relative;
+}
+
+/* ===== LEARNING SECTION STYLES ===== */
 
 /* Learning cards special styling */
 .learning-card {
@@ -1848,7 +1911,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Learning card overlay - REMOVED */
 
 /* Navigation button for learning */
 .skills-nav-btn[data-category="learning"] {
@@ -1870,7 +1932,6 @@ section {
     50% { transform: translateY(-3px) scale(1.1); }
 }
 
-/* ===== END LEARNING SECTION STYLES ===== */
 
 /* Main section */
 .skills-section {
@@ -2053,7 +2114,7 @@ section {
     }
 }
 
-/* Skills Grid - Better Bootstrap grid usage */
+/* Skills Grid */
 .skills-grid-wrapper {
     position: relative;
     z-index: 2;
@@ -2269,6 +2330,95 @@ section {
 .skill-card:focus-within {
     outline: 2px solid #3b82f6;
     outline-offset: 4px;
+}
+
+
+/* How I Can Help Section Styling */
+.how-i-can-help {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.9) 100%) !important;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.how-i-can-help::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 2s ease;
+}
+
+.how-i-can-help:hover::before {
+    left: 100%;
+}
+
+.how-i-can-help:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+}
+
+.how-i-can-help h3 {
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+}
+
+.how-i-can-help p {
+    position: relative;
+    z-index: 2;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.how-i-can-help strong {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.how-i-can-help em {
+    color: #10b981;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Add subtle corner accents */
+.how-i-can-help::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    border-radius: 0 1rem 0 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .how-i-can-help {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .how-i-can-help p {
+        font-size: 1rem;
+    }
+
+    .how-i-can-help h3 {
+        font-size: 1.5rem;
+    }
 }
 /* ====================================
    CONTACT SECTION STYLES
@@ -2786,6 +2936,16 @@ html {
     .nav-link:last-child {
         border-bottom: none;
     }
+
+        .nav-resume-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem !important;
+        }
+
+        .back-to-projects {
+            margin-bottom: 1rem;
+        }
+
 
     /* Hero Section */
     .hero-section {
@@ -3402,3 +3562,21 @@ html {
     }
 }
 
+
+
+/* Mobile responsiveness for tabs */
+@media (max-width: 768px) {
+    .project-tabs .nav-link {
+        padding: 10px 16px;
+        margin: 0 4px;
+        font-size: 14px;
+    }
+
+    .carousel-control-prev-custom {
+        left: -30px;
+    }
+
+    .carousel-control-next-custom {
+        right: -30px;
+    }
+}

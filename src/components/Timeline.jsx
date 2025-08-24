@@ -18,7 +18,7 @@ const Timeline = () => {
             title: 'Systems Engineer',
             company: 'Infosys',
             period: 'Sept 2021 - Aug 2024',
-            location: 'Bangalore, India',
+            location: 'Chennai, India',
             description: 'Supported enterprise applications for global clients like Mercedes-Benz Japan. Gained expertise in problem-solving, application support, and cross-functional collaboration.I advanced from Systems Engineer to Senior Systems Engineer, delivering L2 application support for Mercedes-Benz Japan. I managed end-to-end incident resolution, performed root cause analysis to implement permanent fixes, and ensured high system stability for critical issues in Dealer Front End (DFE) and Sales Wholesale Template (SWT). I also mentored junior engineers, coordinated with L1 and development teams to troubleshoot complex issues, and strengthened client relationships through proactive communication and documentation',
             skills: ['Problem Solving', 'Application Support', 'Client Management', 'Enterprise Systems','User Acceptance Test','Root Cause Analysis','Team Collaboration'],
             icon: '💼'
@@ -42,9 +42,8 @@ const Timeline = () => {
                     <div className="col-lg-10">
                         <div className="text-center mb-5">
                             <h2 className="section-title">
-                                My <span className="text-gradient">Journey</span>
+                                <span className="brand-text">My Journey</span>
                             </h2>
-                            <div className="section-underline mx-auto"></div>
                             <p className="section-subtitle mt-3">
                                 From Systems Engineer to Full-Stack Developer
                             </p>

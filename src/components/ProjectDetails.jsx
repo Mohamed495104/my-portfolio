@@ -1,9 +1,25 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import projects from "../data/projects";
+import { fullStackProjects, frontEndProjects } from "../data/projects"; // import both arrays
 import { Carousel, Accordion, Card } from "react-bootstrap";
-import { FaReact, FaNodeJs, FaGithub, FaDatabase, FaBootstrap, FaJs, FaCss3Alt } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiPostman, SiFlutter, SiDart, SiFirebase, SiDotnet } from "react-icons/si";
+import {
+    FaReact,
+    FaNodeJs,
+    FaGithub,
+    FaDatabase,
+    FaBootstrap,
+    FaJs,
+    FaCss3Alt,
+} from "react-icons/fa";
+import {
+    SiExpress,
+    SiMongodb,
+    SiPostman,
+    SiFlutter,
+    SiDart,
+    SiFirebase,
+    SiDotnet,
+} from "react-icons/si";
 import Footer from "./Footer.jsx";
 
 const techIcons = {
@@ -30,17 +46,30 @@ const techIcons = {
 
 function ProjectDetails() {
     const { id } = useParams();
-    const project = projects.find((p) => p.id === parseInt(id));
+
+    // merge full stack + frontend projects
+    const allProjects = [...fullStackProjects, ...frontEndProjects];
+
+    // find project (string comparison works for both numeric & string IDs)
+    const project = allProjects.find((p) => String(p.id) === String(id));
 
     if (!project) {
         return (
-            <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center" style={{ paddingTop: "100px" }}>
+            <div
+                className="container-fluid min-vh-100 d-flex align-items-center justify-content-center"
+                style={{ paddingTop: "100px" }}
+            >
                 <div className="text-center">
                     <div className="mb-4">
-                        <i className="bi bi-exclamation-triangle-fill text-warning" style={{ fontSize: "4rem" }}></i>
+                        <i
+                            className="bi bi-exclamation-triangle-fill text-warning"
+                            style={{ fontSize: "4rem" }}
+                        ></i>
                     </div>
                     <h2 className="fw-bold text-light mb-3">Project Not Found</h2>
-                    <p className="text-muted mb-4">The project you're looking for doesn't exist or has been moved.</p>
+                    <p className="text-muted mb-4">
+                        The project you're looking for doesn't exist or has been moved.
+                    </p>
                     <Link to="/#projects" className="btn btn-primary px-4 py-2">
                         <i className="bi bi-arrow-left me-2"></i>Back to Projects
                     </Link>
@@ -54,8 +83,13 @@ function ProjectDetails() {
             <div className="container py-5">
                 {/* Project Header */}
                 <header className="project-header text-center mb-5">
-                    <h1 className="project-title display-4 fw-bold mb-3">{project.title}</h1>
-                    <p className="project-description lead text-light-emphasis mx-auto" style={{ maxWidth: "800px" }}>
+                    <h1 className="project-title display-4 fw-bold mb-3">
+                        {project.title}
+                    </h1>
+                    <p
+                        className="project-description lead text-light-emphasis mx-auto"
+                        style={{ maxWidth: "800px" }}
+                    >
                         {project.description}
                     </p>
                 </header>
@@ -107,7 +141,9 @@ function ProjectDetails() {
                                         <ul className="tech-list list-unstyled">
                                             {items.map((tech, i) => (
                                                 <li key={i} className="tech-item d-flex align-items-center mb-2">
-                                                    {techIcons[tech] || <i className="bi bi-check-circle-fill text-success me-2"></i>}
+                                                    {techIcons[tech] || (
+                                                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                                                    )}
                                                     <span className="tech-name">{tech}</span>
                                                 </li>
                                             ))}
@@ -175,7 +211,9 @@ function ProjectDetails() {
                 {/* Source Code CTA */}
                 <section className="cta-section text-center">
                     <div className="cta-content p-5 rounded-4">
-                        <h3 className="cta-title fw-bold mb-3 text-light">Ready to Explore the Code?</h3>
+                        <h3 className="cta-title fw-bold mb-3 text-light">
+                            Ready to Explore the Code?
+                        </h3>
                         <p className="cta-description text-light-emphasis mb-4">
                             Check out the complete source code and contribute to the project on GitHub.
                         </p>

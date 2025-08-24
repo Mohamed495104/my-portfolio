@@ -24,7 +24,7 @@ function About() {
                                 <h2 className="about-title display-4 fw-bold mb-3">
                                     About Me
                                 </h2>
-                                <div className="about-title-underline"></div>
+
                             </div>
 
                             <div className="about-text-wrapper">

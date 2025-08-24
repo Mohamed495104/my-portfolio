@@ -114,7 +114,6 @@ const skills = {
             icon: "figma",
             color: "#F24E1E"
         },
-        // NEW ADDITIONS
         {
             name: "Vercel",
             level: "Intermediate",
@@ -129,7 +128,7 @@ const skills = {
         },
     ],
 
-    // NEW LEARNING SECTION
+    // LEARNING SECTION
     learning: [
         {
             name: "Data Structures & Algorithms",

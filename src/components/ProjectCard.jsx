@@ -26,9 +26,7 @@ function ProjectCard({ id, title, description, screenshots, codeLink }) {
                             className="project-image"
                         />
                         <div className="project-image-overlay">
-                            <div className="project-view-icon">
-                                <i className="bi bi-eye"></i>
-                            </div>
+
                         </div>
                     </div>
                 )}

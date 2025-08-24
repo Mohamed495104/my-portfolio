@@ -21,14 +21,46 @@ const Flyora5 = "/images/Flyora5.png";
 const Flyora6 = "/images/Flyora6.png";
 const Flyora7 = "/images/Flyora7.png";
 
+const Wemart1 = "/images/wemart1.png";
+const Wemart2 = "/images/wemart2.png";
+const Wemart3 = "/images/wemart3.png";
+const Wemart4 = "/images/wemart4.png";
+const Wemart5 = "/images/wemart5.png";
 
-const projects = [
+const Memory1 = "/images/Memory1.png";
+const Memory2 = "/images/Memory2.png";
+const Memory3 = "/images/Memory3.png";
+const Memory4 = "/images/Memory4.png";
+const Memory5 = "/images/Memory5.png";
+const Memory6 = "/images/Memory6.png";
+
+const Prisma1 = "/images/Prisma1.png";
+const Prisma2 = "/images/Prisma2.png";
+const Prisma3 = "/images/Prisma3.png";
+const Prisma4 = "/images/Prisma4.png";
+const Prisma5 = "/images/Prisma5.png";
+const Prisma6 = "/images/Prisma6.png";
+
+const Wild1 = "/images/Wild1.png";
+const Wild2 = "/images/Wild2.png";
+const Wild3 = "/images/Wild3.png";
+const Wild4 = "/images/Wild4.png";
+const Wild5 = "/images/Wild5.png";
+
+const Wander1 = "/images/Wander1.png";
+const Wander2 = "/images/Wander2.png";
+const Wander3 = "/images/Wander3.png";
+const Wander4 = "/images/Wander4.png";
+const Wander5 = "/images/Wander5.png";
+
+// Full Stack Projects
+const fullStackProjects = [
     {
         id: 1,
         title: "Taskflow & Recreation",
         description:
             "A full-stack Task Manager and Recreation Zone application enabling users to manage tasks efficiently and engage in a team recreation hub.",
-        screenshots: [Taskflow1, Taskflow2, Taskflow3, Taskflow4,Taskflow5,Taskflow6],
+        screenshots: [Taskflow1, Taskflow2, Taskflow3, Taskflow4, Taskflow5, Taskflow6],
         techStack: {
             Frontend: ["React", "Bootstrap", "JavaScript", "CSS"],
             Backend: ["Node.js", "Express.js", "MongoDB"],
@@ -64,11 +96,11 @@ const projects = [
         codeLink: "https://github.com/Mohamed495104/task_manager_recreation.git",
     },
 
-    // --- Dummy placeholder projects ---
     {
         id: 2,
         title: "Craftique - Ecommerce Flutter App",
-        description: "A cross-platform ecommerce application built with Flutter and Firebase for showcasing and purchasing handmade art products.",
+        description:
+            "A cross-platform ecommerce application built with Flutter and Firebase for showcasing and purchasing handmade art products.",
         screenshots: [Craftique1, Craftique2, Craftique3, Craftique4, Craftique5, Craftique6],
         techStack: {
             Frontend: ["Flutter", "Dart"],
@@ -97,14 +129,20 @@ const projects = [
             "Modern glassmorphism login/register UI",
         ],
         team: [
-            { name: "Mohamed Ijas", role: "Flutter Developer", github: "https://github.com/Mohamed495104" },
+            {
+                name: "Mohamed Ijas",
+                role: "Flutter Developer",
+                github: "https://github.com/Mohamed495104",
+            },
         ],
         codeLink: "https://github.com/Mohamed495104/flutter_group_project",
     },
+
     {
         id: 3,
         title: "Flyora - Travel Booking Web Application",
-        description: "An ASP.NET-based travel booking web app where users can browse destinations, manage bookings, and confirm travel plans securely.",
+        description:
+            "An ASP.NET-based travel booking web app where users can browse destinations, manage bookings, and confirm travel plans securely.",
         screenshots: [Flyora1, Flyora2, Flyora3, Flyora4, Flyora5, Flyora6, Flyora7],
         techStack: {
             Frontend: ["ASP.NET Web Forms", "HTML5", "CSS3", "Bootstrap"],
@@ -133,10 +171,213 @@ const projects = [
             "Email confirmation support",
         ],
         team: [
-            { name: "Mohamed Ijas", role: "ASP.NET Developer", github: "https://github.com/Mohamed495104" },
+            {
+                name: "Mohamed Ijas",
+                role: "ASP.NET Developer",
+                github: "https://github.com/Mohamed495104",
+            },
         ],
-        codeLink: "https://github.com/Mohamed495104/Flyora_travel_application.git"
+        codeLink: "https://github.com/Mohamed495104/Flyora_travel_application.git",
+    },
+
+    {
+        id: 4,
+        title: "Wemart - PHP Ecommerce Website",
+        description:
+            "A PHP-based ecommerce website with product management, shopping cart, and checkout system designed to deliver a seamless online shopping experience.",
+        screenshots: [Wemart1, Wemart2, Wemart3, Wemart4, Wemart5],
+        techStack: {
+            Frontend: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
+            Backend: ["PHP (OOP)", "MySQL (PDO)"],
+            Tools: ["XAMPP", "Git & GitHub", "VS Code"],
+        },
+        setup: [
+            {
+                title: "Clone Repository",
+                commands: `git clone https://github.com/Mohamed495104/wemart.git`,
+            },
+            {
+                title: "Setup Database",
+                commands: `# Import wemart.sql into MySQL\n# Update database credentials in config.php`,
+            },
+            {
+                title: "Run Locally",
+                commands: `Start Apache & MySQL in XAMPP\nAccess project via http://localhost/wemart`,
+            },
+        ],
+        features: [
+            "User authentication and registration",
+            "Product catalog with categories",
+            "Shopping cart and wishlist support",
+            "Admin panel for CRUD operations",
+            "Secure checkout with order summary",
+            "Created RESTAPI and AJAX to search and update the email availability status during registration",
+        ],
+        team: [
+            {
+                name: "Mohamed Ijas",
+                role: "PHP Developer",
+                github: "https://github.com/Mohamed495104",
+            },
+        ],
+        codeLink: "https://github.com/Mohamed495104/wemart.git",
     },
 ];
 
-export default projects;
+// Frontend Projects
+const frontEndProjects = [
+    {
+        id: 'fe1',
+        title: "Memory Matching Game",
+        description:
+            "A fun and interactive memory card matching game built with HTML, CSS, and JavaScript to enhance focus and improve memory skills.",
+        screenshots: [Memory1, Memory2, Memory3, Memory4, Memory5, Memory6],
+        techStack: {
+            Frontend: ["HTML5", "CSS3", "JavaScript"],
+            Tools: ["Git & GitHub", "VS Code"],
+        },
+        setup: [
+            {
+                title: "Clone Repository",
+                commands: `git clone https://github.com/Mohamed495104/memorymatchgame.git`,
+            },
+            {
+                title: "Run Locally",
+                commands: `# Simply open index.html in your browser\n# or use VS Code Live Server extension`,
+            }
+        ],
+        features: [
+            "Responsive card grid layout",
+            "Flip and match game logic",
+            "Move counter & timer",
+            "Restart/new game functionality",
+            "Lightweight and fast, no frameworks required"
+        ],
+        team: [
+            {
+                name: "Mohamed Ijas",
+                role: "Frontend Developer",
+                github: "https://github.com/Mohamed495104/memorymatchgame.git",
+            },
+        ],
+        codeLink: "https://github.com/Mohamed495104/memorymatchgame.git",
+    },
+
+    {
+        id: 'fe2',
+        title: "Prisma Art Gallery",
+        description:
+            "A modern art gallery website built with HTML, CSS, and JavaScript showcasing curated artworks with a clean, responsive design.",
+        screenshots: [Prisma1, Prisma2, Prisma3, Prisma4, Prisma5, Prisma6],
+        techStack: {
+            Frontend: ["HTML5", "CSS3", "JavaScript"],
+            Tools: ["Git & GitHub", "VS Code"],
+        },
+        setup: [
+            {
+                title: "Clone Repository",
+                commands: `git clone https://github.com/Mohamed495104/prisma-digitalartgallery.git`,
+            },
+            {
+                title: "Run Locally",
+                commands: `# Open index.html in your browser\n# or use VS Code Live Server extension`,
+            },
+        ],
+        features: [
+            "Responsive grid-based gallery layout",
+            "Hover effects and transitions for artworks",
+            "Filter artworks by category",
+            "Modal popups with enlarged views",
+            "Lightweight static site easy to deploy",
+        ],
+        team: [
+            {
+                name: "Mohamed Ijas",
+                role: "Frontend Developer",
+                github: "https://github.com/Mohamed495104/prisma-digitalartgallery.git",
+            },
+        ],
+        codeLink: "https://github.com/Mohamed495104/prisma-digitalartgallery.git",
+    },
+
+
+    {
+        id: 'fe3',
+        title: "Wild Horizon",
+        description:
+            "A visually stunning travel and adventure website built with HTML, CSS, and JavaScript that showcases destinations, guides, and immersive visuals.",
+        screenshots: [Wild1, Wild2, Wild3, Wild4, Wild5],
+        techStack: {
+            Frontend: ["HTML5", "CSS3", "JavaScript"],
+            Tools: ["Git & GitHub", "VS Code"],
+        },
+        setup: [
+            {
+                title: "Clone Repository",
+                commands: `git clone https://github.com/Mohamed495104/wild-horizon.git\ncd wild-horizon`,
+            },
+            {
+                title: "Run Locally",
+                commands: `# Open index.html in your browser\n# or use VS Code Live Server extension`,
+            },
+        ],
+        features: [
+            "Full-width hero banners with parallax effects",
+            "Destination showcase with responsive grid",
+            "Interactive hover effects and animations",
+            "Optimized for performance and accessibility",
+            "Simple and clean static site deployment",
+        ],
+        team: [
+            {
+                name: "Mohamed Ijas",
+                role: "Frontend Developer",
+                github: "https://github.com/Mohamed495104/wild-horizon",
+            },
+        ],
+        codeLink: "https://github.com/Mohamed495104/wild-horizon",
+    },
+
+    {
+        id: 'fe4',
+        title: "WanderNest",
+        description:
+            "A modern accommodation and travel booking website built with HTML, CSS, and JavaScript, offering users an elegant UI to explore stays and destinations.",
+        screenshots: [Wander1, Wander2, Wander3, Wander4],
+        techStack: {
+            Frontend: ["HTML5", "CSS3", "JavaScript"],
+            Tools: ["Git & GitHub", "VS Code"],
+        },
+        setup: [
+            {
+                title: "Clone Repository",
+                commands: `git clone https://github.com/Mohamed495104/wandernest-travelguidesite.git`,
+            },
+            {
+                title: "Run Locally",
+                commands: `# Open index.html in your browser\n# or use VS Code Live Server extension`,
+            },
+        ],
+        features: [
+            "Responsive landing page with hero images",
+            "Accommodation showcase with pricing cards",
+            "Destination highlights with hover effects",
+            "Mobile-first optimized design",
+            "Lightweight static deployment ready",
+        ],
+        team: [
+            {
+                name: "Mohamed Ijas",
+                role: "Frontend Developer",
+                github: "https://github.com/Mohamed495104/wandernest-travelguidesite.git",
+            },
+        ],
+        codeLink: "https://github.com/Mohamed495104/wandernest-travelguidesite.git",
+    },
+];
+
+// Export both arrays
+export { fullStackProjects, frontEndProjects };
+
+// Default export for backward compatibility
+export default fullStackProjects;

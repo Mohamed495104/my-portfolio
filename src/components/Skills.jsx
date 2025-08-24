@@ -70,7 +70,6 @@ function Skills() {
                             <h2 className="display-4 fw-bold text-white mb-3">
                                 Skills & Technologies
                             </h2>
-                            <div className="skills-title-underline mx-auto"></div>
                         </div>
                         <p
                             className="lead text-white-50 mx-auto"
@@ -255,6 +254,27 @@ function Skills() {
                         </div>
                     </div>
                 </div>
+
+                {/* How I Can Help Block */}
+                <div className="row justify-content-center mt-5">
+                    <div className="col-12 col-lg-10">
+                        <div className="how-i-can-help p-4 p-md-5 bg-dark text-light rounded-4 shadow-sm text-center">
+                            <h3 className="fw-bold mb-3">How I Can Help You!</h3>
+                            <p className="mb-0 text-white-50">
+                                I create <strong>modern, high-performing web solutions</strong> that blend
+                                clean design with powerful functionality. My focus is on building{" "}
+                                <strong>websites that engage users</strong>, <strong>applications that scale</strong>,
+                                and <strong>experiences that drive real results</strong>.
+                                Whether it’s a <em>portfolio </em>that stands out, an{" "}
+                                <em>e-commerce platform </em>that boosts sales, or a{" "}
+                                <em>custom app that solves business challenges</em>, I deliver value through
+                                both technical expertise and creative problem-solving.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </section>
     );
