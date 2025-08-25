@@ -87,7 +87,7 @@ function ProjectDetails() {
                         {project.title}
                     </h1>
                     <p
-                        className="project-description lead text-light-emphasis mx-auto"
+                        className="project-description lead text-secondary mx-auto"
                         style={{ maxWidth: "800px" }}
                     >
                         {project.description}
@@ -214,7 +214,7 @@ function ProjectDetails() {
                         <h3 className="cta-title fw-bold mb-3 text-light">
                             Ready to Explore the Code?
                         </h3>
-                        <p className="cta-description text-light-emphasis mb-4">
+                        <p className="cta-description text-light-50 mb-4">
                             Check out the complete source code and contribute to the project on GitHub.
                         </p>
                         <a

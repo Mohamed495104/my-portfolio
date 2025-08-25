@@ -10,7 +10,7 @@ const Timeline = () => {
             period: ' Sept 2024 - Dec 2025',
             location: 'Kitchener, ON',
             description: 'Specializing in MERN stack development with focus on building scalable, user-focused applications using modern technologies.',
-            skills: ['MongoDB', 'Express.js', 'Node.js', 'AWS', 'Firebase', 'React.js','Bootstrap'],
+            skills: ['MongoDB', 'Express.js', 'Node.js','MySQL', 'AWS', 'Firebase', 'React.js','Bootstrap','RESTAPI','Flutter','Figma'],
             icon: '🎓'
         },
         {
@@ -20,7 +20,7 @@ const Timeline = () => {
             period: 'Sept 2021 - Aug 2024',
             location: 'Chennai, India',
             description: 'Supported enterprise applications for global clients like Mercedes-Benz Japan. Gained expertise in problem-solving, application support, and cross-functional collaboration.I advanced from Systems Engineer to Senior Systems Engineer, delivering L2 application support for Mercedes-Benz Japan. I managed end-to-end incident resolution, performed root cause analysis to implement permanent fixes, and ensured high system stability for critical issues in Dealer Front End (DFE) and Sales Wholesale Template (SWT). I also mentored junior engineers, coordinated with L1 and development teams to troubleshoot complex issues, and strengthened client relationships through proactive communication and documentation',
-            skills: ['Problem Solving', 'Application Support', 'Client Management', 'Enterprise Systems','User Acceptance Test','Root Cause Analysis','Team Collaboration'],
+            skills: ['Problem Solving', 'Application Support', 'Client Management', 'Enterprise Systems','User Acceptance Test','Root Cause Analysis','Bug Fixes','Team Collaboration','Agile','ServiceNow'],
             icon: '💼'
         },
         {

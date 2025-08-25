@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { inject } from "@vercel/analytics";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -63,6 +64,7 @@ function App() {
                     <Route path="/projects/:id" element={<ProjectDetails />} />
                 </Routes>
             </ScrollHandler>
+            <SpeedInsights />
         </Router>
     );
 }
