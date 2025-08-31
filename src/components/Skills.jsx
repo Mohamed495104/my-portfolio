@@ -145,7 +145,7 @@ function Skills() {
                                                         {skill.name}
                                                     </h5>
 
-                                                    {/* Progress Bar or Learning Status */}
+                                                    {/* Progress Bar */}
                                                     {activeCategory === "learning" ? (
                                                         <div className="learning-status-wrapper w-100 mt-auto">
                                                             <div className="d-flex justify-content-between align-items-center mb-2">
@@ -255,7 +255,7 @@ function Skills() {
                     </div>
                 </div>
 
-                {/* How I Can Help Block */}
+                {/* How I Can Help You Block */}
                 <div className="row justify-content-center mt-5">
                     <div className="col-12 col-lg-10">
                         <div className="how-i-can-help p-4 p-md-5 bg-dark text-light rounded-4 shadow-sm text-center">

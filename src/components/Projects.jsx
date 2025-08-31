@@ -8,8 +8,8 @@ function Projects() {
     // Get current projects based on active tab
     const currentProjects = activeTab === 'fullstack' ? fullStackProjects : frontEndProjects;
 
-    // Group projects into slides (3 cards per slide)
-    const projectsPerSlide = 3;
+    // Responsive grouping: 1 card per slide on mobile, 3 on desktop
+    const projectsPerSlide = window.innerWidth < 768 ? 1 : 3;
     const slideGroups = [];
 
     for (let i = 0; i < currentProjects.length; i += projectsPerSlide) {

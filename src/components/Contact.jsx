@@ -129,7 +129,7 @@ function Contact() {
                                         value={formData.name}
                                         onChange={handleInputChange}
                                         className="form-control form-control-lg border-0 shadow-sm contact-input"
-                                        placeholder="Enter your full name"
+                                        placeholder="Enter Your Full Name"
                                         required
                                     />
                                 </div>
@@ -141,13 +141,17 @@ function Contact() {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         className="form-control form-control-lg border-0 shadow-sm contact-input"
-                                        placeholder="your.email@example.com"
+                                        placeholder="Enter your email (e.g. name@example.com)"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        title="Please enter a valid email address (e.g. name@example.com)"
                                         required
                                     />
                                 </div>
+
 
                                 <div className="mb-4">
                                     <label htmlFor="message" className="form-label text-white fw-semibold mb-2">

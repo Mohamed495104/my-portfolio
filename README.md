@@ -1,12 +1,44 @@
-# React + Vite
+🌐 Personal Portfolio – Mohamed Ijas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built to showcase my projects, skills, and experience as a Full-Stack Developer. This site reflects my journey of learning, building, and deploying professional-grade web applications.
 
-Currently, two official plugins are available:
+🚀 Portfolio Link: https://my-portfolio-pink-phi-izyt63nthy.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Highlights
 
-## Expanding the ESLint configuration
+Built with React + Vite + Bootstrap – for fast development and clean, responsive UI.
+Mobile-First Approach – optimized for all devices: phones, tablets, and desktops.
+Basic SEO Optimization – meta tags, sitemap, and performance tweaks for discoverability.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+🔑 Key Features
+
+Hero Section – quick introduction with CTA buttons (View Projects, Download Resume).
+Projects Showcase – live demos, GitHub links, GIF previews, and tech stack badges.
+Skills Matrix – organized into frontend, backend, databases, and tools.
+About Section – background, career goals, and professional journey.
+Contact Form – functional form integrated with Formspree + social links.
+Resume Download & View
+
+⚙️ Tech Stack
+
+Frontend: React 18, Vite, Bootstrap 5
+Backend: MongoDB
+Deployment: Vercel (CI/CD enabled)
+Tools: WebStorm, GitHub
+
+Other: SEO essentials, responsive design principles
+
+
+🚀 Deployment
+Deployed on Vercel with continuous deployment:
+Push changes → GitHub → Auto-build → Live update
+
+
+📬 Contact
+
+👤 Mohamed Ijas
+📧 Email: mdijas555@gmail.com
+
+🔗 Portfolio: https://my-portfolio-pink-phi-izyt63nthy.vercel.app/
+💼 LinkedIn: www.linkedin.com/in/mohamedijas03

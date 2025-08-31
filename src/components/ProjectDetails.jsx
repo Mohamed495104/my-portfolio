@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { fullStackProjects, frontEndProjects } from "../data/projects"; // import both arrays
+import { fullStackProjects, frontEndProjects } from "../data/projects";
 import { Carousel, Accordion, Card } from "react-bootstrap";
 import {
     FaReact,
@@ -50,7 +50,7 @@ function ProjectDetails() {
     // merge full stack + frontend projects
     const allProjects = [...fullStackProjects, ...frontEndProjects];
 
-    // find project (string comparison works for both numeric & string IDs)
+    // find project
     const project = allProjects.find((p) => String(p.id) === String(id));
 
     if (!project) {

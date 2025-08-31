@@ -33,7 +33,7 @@ function Header() {
                 offset: -80,
             });
         }
-        setMenuOpen(false); // close menu after click
+        setMenuOpen(false);
     };
 
     return (
@@ -128,7 +128,7 @@ function Header() {
                                 href="/resume.pdf"
                                 target="_blank"
                                 className="btn nav-resume-btn"
-                                onClick={() => setMenuOpen(false)} // 👈 closes on click
+                                onClick={() => setMenuOpen(false)}
                             >
                                 <span>Resume</span>
                                 <i className="bi bi-eye ms-2"></i>
