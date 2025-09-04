@@ -28,7 +28,7 @@ function Intro() {
                             <div className="hero-description mb-5">
                                 <p className="description-text">
                                     Full-Stack Developer specializing in the MERN stack — building <span className="text-info fw-semibold">scalable</span>,
-                                    <span className="text-success fw-semibold"> user-focused</span> web applications. Currently advancing cloud & modern development skills at Conestoga College,
+                                    <span className="text-success fw-semibold"> user-focused</span> Web & Mobile applications. Currently advancing cloud & modern development skills at Conestoga College,
                                     while creating projects that combine performance, clean code, and real-world impact
                                 </p>
                             </div>
