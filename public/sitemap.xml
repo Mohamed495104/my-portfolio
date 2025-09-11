@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/1</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/2</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/3</loc>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/4</loc>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/fe1</loc>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/fe2</loc>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/fe3</loc>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://my-portfolio-pink-phi-izyt63nthy.vercel.app/projects/fe4</loc>
+        <priority>0.1</priority>
+    </url>
+
+</urlset>
