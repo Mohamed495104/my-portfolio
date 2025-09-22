@@ -20,7 +20,7 @@ function Intro() {
 
                             {/* Role */}
                             <h2 className="hero-role mb-5">
-                                <span className="role-text">MERN-Stack Developer</span>
+                                <span className="role-text">Full-Stack Developer</span>
                                 <div className="role-underline"></div>
                             </h2>
 
