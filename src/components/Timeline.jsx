@@ -2,25 +2,48 @@ import React from 'react';
 
 const Timeline = () => {
     const timelineData = [
-
         {
             type: 'education',
             title: 'Postgraduate Degree in Web Development',
             company: 'Conestoga College',
-            period: ' Sept 2024 - Dec 2025',
+            period: 'Sept 2024 - Dec 2025',
             location: 'Kitchener, ON',
-            description: 'Specializing in MERN stack development with focus on building scalable, user-focused applications using modern technologies.',
-            skills: ['MongoDB', 'Express.js', 'Node.js','MySQL', 'AWS', 'Firebase', 'React.js','Bootstrap','RESTAPI','Flutter','Figma'],
+            description: [
+                'Specializing in MERN stack development with focus on building scalable, user-focused applications using modern technologies.'
+            ],
+            skills: ['MongoDB', 'Express.js', 'Node.js','MySQL', 'AWS', 'Firebase', 'React.js','Bootstrap','REST API','Flutter','Figma'],
             icon: '🎓'
+        },
+        {
+            type: 'work',
+            title: 'Senior Systems Engineer',
+            company: 'Infosys',
+            period: 'Oct 2023 - Aug 2024',
+            location: 'Chennai, India',
+            description: [
+                'Led 2nd-level support and proactive monitoring for enterprise applications, ensuring high system performance and reliability.',
+                'Resolved complex incidents by collaborating with development teams to deliver permanent fixes, bug resolutions, and production deployments.',
+                'Conducted root cause analysis (RCA) for recurring issues and validated business fixes via UAT.',
+                'Mentored junior team members, fostering knowledge sharing and Agile/Scrum best practices.',
+                'Maintained detailed incident/change documentation, driving continuous system improvement.'
+            ],
+            skills: ['Problem Solving', 'Mentorship', 'Leadership','User Acceptance Test','Root Cause Analysis','Bug Fixes','Cross-Team Collaboration','Agile Workflow'],
+            icon: '💼'
         },
         {
             type: 'work',
             title: 'Systems Engineer',
             company: 'Infosys',
-            period: 'Sept 2021 - Aug 2024',
+            period: 'Sept 2021 - Aug 2023',
             location: 'Chennai, India',
-            description: 'Supported enterprise applications for global clients, progressing from Systems Engineer to Senior Systems Engineer. Focused on L2 application support, where I managed end-to-end incident resolution, performed root cause analysis, and implemented permanent fixes to ensure stability of critical business platforms. I worked closely with L1 teams, developers, and other stakeholders to resolve complex issues, while also providing direct customer support to maintain smooth operations. Additionally, I mentored junior engineers, strengthened client relationships through proactive communication, and promoted knowledge sharing with clear documentation.',
-            skills: ['Problem Solving', 'Application Support', 'Client Management', 'Enterprise Systems','User Acceptance Test','Root Cause Analysis','Bug Fixes','Team Collaboration','Agile','ServiceNow'],
+            description: [
+                'Monitored application performance and ensured stable day-to-day operations.',
+                'Managed full incident lifecycle: triage, prioritization, communication, and resolution.',
+                'Provided end-user support, improving adoption of application features.',
+                'Maintained documentation of incidents, changes, and fixes for transparency.',
+                'Assisted in bug fixes, production deployments, and release documentation.'
+            ],
+            skills: ['Problem Solving', 'Enterprise Systems', 'Application Support','User Acceptance Test','Team Collaboration','Agile','ServiceNow'],
             icon: '💼'
         },
         {
@@ -29,7 +52,9 @@ const Timeline = () => {
             company: 'SRM University',
             period: 'Aug 2017 - Apr 2021',
             location: 'Chennai',
-            description: 'Foundation in engineering principles and problem-solving methodologies.',
+            description: [
+                'Foundation in engineering principles, software development, and problem-solving methodologies.'
+            ],
             skills: ['Engineering Fundamentals', 'Mathematics', 'Problem Solving'],
             icon: '🎓'
         }
@@ -72,18 +97,23 @@ const Timeline = () => {
                                             <i className="bi bi-building me-2"></i>
                                             {item.company}
                                         </div>
-                                        <div className="timeline-location">
+                                        <div className="timeline-location mb-3">
                                             <i className="bi bi-geo-alt me-2"></i>
                                             {item.location}
                                         </div>
 
-                                        <p className="timeline-description">{item.description}</p>
+                                        {/* Description as list */}
+                                        <ul className="timeline-description-list">
+                                            {item.description.map((point, i) => (
+                                                <li key={i} className="timeline-description">{point}</li>
+                                            ))}
+                                        </ul>
 
-                                        <div className="timeline-skills">
+                                        <div className="timeline-skills mt-3">
                                             {item.skills.map((skill, skillIndex) => (
                                                 <span key={skillIndex} className="skill-tag">
-                          {skill}
-                        </span>
+                                                    {skill}
+                                                </span>
                                             ))}
                                         </div>
                                     </div>
