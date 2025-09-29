@@ -26,36 +26,6 @@ function Skills() {
         { key: "learning", name: "Upskilling", icon: "bi-mortarboard", color: "#8b5cf6" },
     ];
 
-    const getProficiencyWidth = (level) => {
-        switch (level.toLowerCase()) {
-            case "expert":
-                return "85%";
-            case "advanced":
-                return "75%";
-            case "intermediate":
-                return "50%";
-            case "beginner":
-                return "25%";
-            default:
-                return "20%";
-        }
-    };
-
-    const getProficiencyColor = (level) => {
-        switch (level.toLowerCase()) {
-            case "expert":
-                return "#10b981";
-            case "advanced":
-                return "#3b82f6";
-            case "intermediate":
-                return "#f59e0b";
-            case "beginner":
-                return "#ef4444";
-            default:
-                return "#6b7280";
-        }
-    };
-
     const allSkills = Object.values(skills).flat();
     const totalTechnologies = allSkills.length;
     const totalCategories = Object.keys(skills).length;
@@ -145,8 +115,8 @@ function Skills() {
                                                         {skill.name}
                                                     </h5>
 
-                                                    {/* Progress Bar */}
-                                                    {activeCategory === "learning" ? (
+                                                    {/* Learning Status (only for learning category) */}
+                                                    {activeCategory === "learning" && (
                                                         <div className="learning-status-wrapper w-100 mt-auto">
                                                             <div className="d-flex justify-content-between align-items-center mb-2">
                                                                 <span className="learning-status-text small text-warning fw-medium">
@@ -168,27 +138,6 @@ function Skills() {
                                                                     </small>
                                                                 </div>
                                                             )}
-                                                        </div>
-                                                    ) : (
-                                                        <div className="skill-level-wrapper w-100 mt-auto">
-                                                            <div className="d-flex justify-content-between align-items-center mb-2">
-                                                                <span className="skill-level-text small text-white-50 fw-medium">
-                                                                    {skill.level}
-                                                                </span>
-                                                                <span className="skill-percentage small text-info fw-semibold">
-                                                                    {getProficiencyWidth(skill.level)}
-                                                                </span>
-                                                            </div>
-                                                            <div className="skill-progress-bar">
-                                                                <div
-                                                                    className="skill-progress-fill"
-                                                                    style={{
-                                                                        width: getProficiencyWidth(skill.level),
-                                                                        backgroundColor:
-                                                                            getProficiencyColor(skill.level),
-                                                                    }}
-                                                                ></div>
-                                                            </div>
                                                         </div>
                                                     )}
                                                 </div>
@@ -265,7 +214,7 @@ function Skills() {
                                 clean design with powerful functionality. My focus is on building{" "}
                                 <strong>websites that engage users</strong>, <strong>applications that scale</strong>,
                                 and <strong>experiences that drive real results</strong>.
-                                Whether it’s a <em>portfolio </em>that stands out, an{" "}
+                                Whether it's a <em>portfolio </em>that stands out, an{" "}
                                 <em>e-commerce platform </em>that boosts sales, or a{" "}
                                 <em>custom app that solves business challenges</em>, I deliver value through
                                 both technical expertise and creative problem-solving.
@@ -273,8 +222,6 @@ function Skills() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
     );

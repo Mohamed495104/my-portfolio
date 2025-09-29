@@ -4,7 +4,7 @@ import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false); // 👈 track mobile menu state
+    const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -18,13 +18,11 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Back to projects handler
     const handleBackToProjects = () => {
         navigate("/", { state: { scrollTo: "projects" } });
-        setMenuOpen(false); // close menu if open
+        setMenuOpen(false);
     };
 
-    // Close menu helper
     const handleNavClick = (scrollTarget) => {
         if (scrollTarget) {
             scroller.scrollTo(scrollTarget, {
@@ -103,7 +101,10 @@ function Header() {
                         ) : (
                             ["intro", "about", "timeline", "projects", "skills", "contact"].map(
                                 (section) => (
-                                    <li className="nav-item" key={section}>
+                                    <li
+                                        className={`nav-item ${section === "contact" ? "dropdown-container" : ""}`}
+                                        key={section}
+                                    >
                                         <Link
                                             to={section}
                                             smooth={true}
@@ -112,13 +113,45 @@ function Header() {
                                             offset={-80}
                                             activeClass="nav-active"
                                             className="nav-link"
-                                            onClick={() => handleNavClick(section)} // 👈 closes after click
+                                            onClick={() => handleNavClick(section)}
                                         >
                                             <span className="nav-text">
                                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                                             </span>
                                             <div className="nav-indicator"></div>
                                         </Link>
+                                        {section === "contact" && (
+                                            <div className="contact-dropdown">
+                                                <a
+                                                    href="https://www.linkedin.com/in/mohamedijas03/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="dropdown-item"
+                                                    onClick={() => setMenuOpen(false)}
+                                                >
+                                                    <i className="bi bi-linkedin"></i>
+                                                    <span>LinkedIn</span>
+                                                </a>
+                                                <a
+                                                    href="https://github.com/Mohamed495104"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="dropdown-item"
+                                                    onClick={() => setMenuOpen(false)}
+                                                >
+                                                    <i className="bi bi-github"></i>
+                                                    <span>GitHub</span>
+                                                </a>
+                                                <a
+                                                    href="mailto:mdijas555@gmail.com"
+                                                    className="dropdown-item"
+                                                    onClick={() => setMenuOpen(false)}
+                                                >
+                                                    <i className="bi bi-envelope"></i>
+                                                    <span>Email</span>
+                                                </a>
+                                            </div>
+                                        )}
                                     </li>
                                 )
                             )
