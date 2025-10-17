@@ -77,11 +77,6 @@ function Footer() {
                                 &copy; {currentYear} Mohamed Ijas. All rights reserved.
                             </p>
                         </div>
-                        <div className="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                            <p className="footer-tech text-light opacity-75 mb-0">
-                                Built with React & Bootstrap
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
