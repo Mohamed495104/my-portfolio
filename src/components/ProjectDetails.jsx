@@ -81,17 +81,33 @@ function ProjectDetails() {
     return (
         <div className="project-details-wrapper" style={{ paddingTop: "100px" }}>
             <div className="container py-5">
-                {/* Project Header */}
+                {/* Project Header with Highlights */}
                 <header className="project-header text-center mb-5">
-                    <h1 className="project-title display-4 fw-bold mb-3">
+                    <h1 className="project-title display-4 fw-bold mb-4">
                         {project.title}
                     </h1>
                     <p
-                        className="project-description lead text-secondary mx-auto"
+                        className="project-description lead text-secondary mx-auto mb-4"
                         style={{ maxWidth: "800px" }}
                     >
                         {project.description}
                     </p>
+                    
+                    {/* Project Highlights */}
+                    {project.highlights && (
+                        <div className="project-highlights-wrapper mb-4">
+                            <div className="row justify-content-center g-3">
+                                {project.highlights.map((highlight, idx) => (
+                                    <div className="col-auto" key={idx}>
+                                        <div className="project-highlight-badge">
+                                            <span className="highlight-label">{highlight.label}:</span>
+                                            <span className="highlight-value">{highlight.value}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </header>
 
                 {/* Screenshots Carousel */}
@@ -120,6 +136,27 @@ function ProjectDetails() {
                         </div>
                     </div>
                 </section>
+
+                {/* Long Description */}
+                {project.longDescription && (
+                    <section className="project-overview-section mb-5">
+                        <div className="section-header text-center mb-4">
+                            <h2 className="section-title fw-bold">
+                                <i className="bi bi-info-circle-fill me-3 text-info"></i>
+                                Project Overview
+                            </h2>
+                        </div>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-10">
+                                <div className="overview-card p-4">
+                                    <p className="overview-text mb-0">
+                                        {project.longDescription}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
 
                 {/* Tech Stack Section */}
                 <section className="tech-stack-section mb-5">
@@ -155,6 +192,29 @@ function ProjectDetails() {
                     </div>
                 </section>
 
+                {/* Features Section */}
+                <section className="features-section mb-5">
+                    <div className="section-header text-center mb-4">
+                        <h2 className="section-title fw-bold">
+                            <i className="bi bi-star-fill me-3 text-warning"></i>
+                            Key Features
+                        </h2>
+                    </div>
+
+                    <div className="features-grid">
+                        <div className="row g-3">
+                            {project.features.map((feature, idx) => (
+                                <div className="col-md-6" key={idx}>
+                                    <div className="feature-item d-flex align-items-start p-3 rounded-3">
+                                        <i className="bi bi-check-circle-fill text-success me-3 mt-1 flex-shrink-0"></i>
+                                        <span className="feature-text">{feature}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Setup Instructions */}
                 <section className="setup-section mb-5">
                     <div className="section-header text-center mb-4">
@@ -182,29 +242,6 @@ function ProjectDetails() {
                                 </Accordion.Item>
                             ))}
                         </Accordion>
-                    </div>
-                </section>
-
-                {/* Features Section */}
-                <section className="features-section mb-5">
-                    <div className="section-header text-center mb-4">
-                        <h2 className="section-title fw-bold">
-                            <i className="bi bi-star-fill me-3 text-warning"></i>
-                            Key Features
-                        </h2>
-                    </div>
-
-                    <div className="features-grid">
-                        <div className="row g-3">
-                            {project.features.map((feature, idx) => (
-                                <div className="col-md-6" key={idx}>
-                                    <div className="feature-item d-flex align-items-start p-3 rounded-3">
-                                        <i className="bi bi-check-circle-fill text-success me-3 mt-1 flex-shrink-0"></i>
-                                        <span className="feature-text">{feature}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </section>
 

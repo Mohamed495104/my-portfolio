@@ -60,6 +60,12 @@ const fullStackProjects = [
         title: "Taskflow & Recreation",
         description:
             "A full-stack Task Manager and Recreation Zone application enabling users to manage tasks efficiently and engage in a team recreation hub.",
+        longDescription: "Taskflow & Recreation is a comprehensive productivity platform that combines task management with team collaboration features. Built with the MERN stack, it provides users with an intuitive interface to organize their work while fostering team engagement through a dedicated recreation zone for casual communication and team bonding.",
+        highlights: [
+            { label: "Architecture", value: "Full-Stack MERN" },
+            { label: "Focus", value: "Task Management & Team Collaboration" },
+            { label: "Type", value: "Web Application" },
+        ],
         screenshots: [Taskflow1, Taskflow2, Taskflow3, Taskflow4, Taskflow5, Taskflow6],
         techStack: {
             Frontend: ["React", "Bootstrap", "JavaScript", "CSS"],
@@ -82,9 +88,11 @@ const fullStackProjects = [
         ],
         features: [
             "Responsive design with Bootstrap",
-            "Task CRUD operations",
-            "Recreation chat/zone for collaboration",
-            "Authentication & authorization",
+            "Task CRUD operations with real-time updates",
+            "Recreation chat/zone for team collaboration",
+            "Secure authentication & authorization",
+            "Task categorization and priority management",
+            "User-friendly dashboard with activity tracking",
         ],
         team: [
             {
@@ -101,6 +109,12 @@ const fullStackProjects = [
         title: "Craftique - Ecommerce Flutter App",
         description:
             "A cross-platform ecommerce application built with Flutter and Firebase for showcasing and purchasing handmade art products.",
+        longDescription: "Craftique is a mobile e-commerce platform designed specifically for artisans to showcase and sell their handmade products. Built with Flutter for cross-platform compatibility and Firebase for backend services, it offers a seamless shopping experience with features like wishlist management, cart functionality, and secure checkout.",
+        highlights: [
+            { label: "Platform", value: "Mobile (iOS & Android)" },
+            { label: "Focus", value: "E-Commerce for Handmade Arts" },
+            { label: "Type", value: "Flutter Mobile App" },
+        ],
         screenshots: [Craftique1, Craftique2, Craftique3, Craftique4, Craftique5, Craftique6],
         techStack: {
             Frontend: ["Flutter", "Dart"],
@@ -127,6 +141,8 @@ const fullStackProjects = [
             "Wishlist & Cart functionality",
             "Smooth checkout & order confirmation",
             "Modern glassmorphism login/register UI",
+            "Real-time product availability updates",
+            "Product search and filtering options",
         ],
         team: [
             {
@@ -143,6 +159,12 @@ const fullStackProjects = [
         title: "Flyora - Travel Booking Web Application",
         description:
             "An ASP.NET-based travel booking web app where users can browse destinations, manage bookings, and confirm travel plans securely.",
+        longDescription: "Flyora is a comprehensive travel booking platform built with ASP.NET Web Forms and SQL Server. It provides users with an intuitive interface to explore travel destinations, view pricing details, manage bookings, and confirm their travel plans. The application features a robust booking system with multiple payment options and email confirmation functionality.",
+        highlights: [
+            { label: "Platform", value: "ASP.NET Web Application" },
+            { label: "Focus", value: "Travel Booking & Management" },
+            { label: "Database", value: "SQL Server" },
+        ],
         screenshots: [Flyora1, Flyora2, Flyora3, Flyora4, Flyora5, Flyora6, Flyora7],
         techStack: {
             Frontend: ["ASP.NET Web Forms", "HTML5", "CSS3", "Bootstrap"],
@@ -165,10 +187,12 @@ const fullStackProjects = [
         ],
         features: [
             "Browse destinations with pricing and details",
-            "Booking system with traveler details",
-            "Payment methods including Cash on Arrival",
+            "Comprehensive booking system with traveler details",
+            "Multiple payment methods including Cash on Arrival",
             "Booking summary & confirmation page",
             "Email confirmation support",
+            "Admin panel for destination management",
+            "User-friendly navigation and search",
         ],
         team: [
             {
@@ -185,6 +209,12 @@ const fullStackProjects = [
         title: "Wemart - PHP Ecommerce Website",
         description:
             "A PHP-based ecommerce website with product management, shopping cart, and checkout system designed to deliver a seamless online shopping experience.",
+        longDescription: "Wemart is a full-featured e-commerce platform developed using PHP OOP principles and MySQL. It provides a complete online shopping solution with user authentication, product catalog management, shopping cart functionality, and an admin panel for CRUD operations. The application features a RESTful API for email availability checks during registration.",
+        highlights: [
+            { label: "Architecture", value: "PHP OOP with MySQL" },
+            { label: "Focus", value: "E-Commerce Platform" },
+            { label: "Features", value: "Admin Panel & REST API" },
+        ],
         screenshots: [Wemart1, Wemart2, Wemart3, Wemart4, Wemart5],
         techStack: {
             Frontend: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
@@ -211,7 +241,9 @@ const fullStackProjects = [
             "Shopping cart and wishlist support",
             "Admin panel for CRUD operations",
             "Secure checkout with order summary",
-            "Created RESTAPI and AJAX to search and update the email availability status during registration",
+            "REST API for email availability validation",
+            "AJAX-powered dynamic search functionality",
+            "Session management for user tracking",
         ],
         team: [
             {
@@ -231,6 +263,12 @@ const frontEndProjects = [
         title: "Memory Matching Game",
         description:
             "A fun and interactive memory card matching game built with HTML, CSS, and JavaScript to enhance focus and improve memory skills.",
+        longDescription: "An engaging browser-based memory game that challenges players to match pairs of cards. Built with vanilla JavaScript without any frameworks, it demonstrates clean code architecture and DOM manipulation skills. The game features a timer, move counter, and restart functionality for an enhanced gaming experience.",
+        highlights: [
+            { label: "Technology", value: "Vanilla JavaScript" },
+            { label: "Type", value: "Interactive Game" },
+            { label: "Performance", value: "Lightweight & Fast" },
+        ],
         screenshots: [Memory1, Memory2, Memory3, Memory4, Memory5, Memory6],
         techStack: {
             Frontend: ["HTML5", "CSS3", "JavaScript"],
@@ -251,7 +289,8 @@ const frontEndProjects = [
             "Flip and match game logic",
             "Move counter & timer",
             "Restart/new game functionality",
-            "Lightweight and fast, no frameworks required"
+            "Lightweight and fast, no frameworks required",
+            "Smooth animations and transitions",
         ],
         team: [
             {
@@ -268,6 +307,12 @@ const frontEndProjects = [
         title: "Prisma Art Gallery",
         description:
             "A modern art gallery website built with HTML, CSS, and JavaScript showcasing curated artworks with a clean, responsive design.",
+        longDescription: "Prisma is a visually stunning digital art gallery website that showcases curated artworks with an elegant and intuitive interface. Built with modern web technologies, it features a responsive grid layout, category filtering, and modal popups for detailed artwork viewing. The design emphasizes visual appeal and user experience.",
+        highlights: [
+            { label: "Design", value: "Modern & Clean UI" },
+            { label: "Features", value: "Category Filtering" },
+            { label: "Type", value: "Static Art Gallery" },
+        ],
         screenshots: [Prisma1, Prisma2, Prisma3, Prisma4, Prisma5, Prisma6],
         techStack: {
             Frontend: ["HTML5", "CSS3", "JavaScript"],
@@ -285,10 +330,11 @@ const frontEndProjects = [
         ],
         features: [
             "Responsive grid-based gallery layout",
-            "Hover effects and transitions for artworks",
+            "Hover effects and smooth transitions",
             "Filter artworks by category",
             "Modal popups with enlarged views",
             "Lightweight static site easy to deploy",
+            "Optimized images for fast loading",
         ],
         team: [
             {
@@ -306,6 +352,12 @@ const frontEndProjects = [
         title: "Wild Horizon",
         description:
             "A visually stunning travel and adventure website built with HTML, CSS, and JavaScript that showcases destinations, guides, and immersive visuals.",
+        longDescription: "Wild Horizon is an immersive travel and adventure website designed to inspire wanderlust. Featuring full-width hero banners, parallax effects, and stunning visuals, it creates an engaging experience for users exploring travel destinations. The site is optimized for performance and accessibility while maintaining a high visual impact.",
+        highlights: [
+            { label: "Design", value: "Parallax & Immersive" },
+            { label: "Focus", value: "Travel & Adventure" },
+            { label: "Performance", value: "Optimized Loading" },
+        ],
         screenshots: [Wild1, Wild2, Wild3, Wild4, Wild5],
         techStack: {
             Frontend: ["HTML5", "CSS3", "JavaScript"],
@@ -327,6 +379,7 @@ const frontEndProjects = [
             "Interactive hover effects and animations",
             "Optimized for performance and accessibility",
             "Simple and clean static site deployment",
+            "Mobile-first responsive design",
         ],
         team: [
             {
@@ -343,6 +396,12 @@ const frontEndProjects = [
         title: "WanderNest",
         description:
             "A modern accommodation and travel booking website built with HTML, CSS, and JavaScript, offering users an elegant UI to explore stays and destinations.",
+        longDescription: "WanderNest is a beautifully designed accommodation and travel booking website that provides users with an elegant interface to discover unique stays and travel destinations. The site features responsive landing pages with hero images, pricing cards for accommodations, and destination highlights with smooth hover effects, all optimized for a mobile-first experience.",
+        highlights: [
+            { label: "Design", value: "Elegant & Modern" },
+            { label: "Focus", value: "Accommodation Booking" },
+            { label: "Layout", value: "Mobile-First Responsive" },
+        ],
         screenshots: [Wander1, Wander2, Wander3, Wander4],
         techStack: {
             Frontend: ["HTML5", "CSS3", "JavaScript"],
@@ -364,6 +423,7 @@ const frontEndProjects = [
             "Destination highlights with hover effects",
             "Mobile-first optimized design",
             "Lightweight static deployment ready",
+            "Clean and intuitive navigation",
         ],
         team: [
             {
