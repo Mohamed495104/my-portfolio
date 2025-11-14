@@ -3233,6 +3233,20 @@ html {
         padding: 0 0.5rem;
     }
 
+    /* Hero Greeting Badge */
+    .hero-greeting-badge {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .greeting-icon {
+        font-size: 1.25rem;
+    }
+
+    .greeting-text {
+        font-size: 0.9rem;
+    }
+
     .greeting-line {
         font-size: 1rem !important;
         margin-bottom: 0.75rem;
@@ -3252,7 +3266,28 @@ html {
     .description-text {
         font-size: 0.95rem;
         line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Hero Stats Mobile */
+    .hero-stats {
         margin-bottom: 2rem;
+    }
+
+    .hero-stat-item {
+        padding: 0.75rem 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .hero-stat-divider {
+        display: none;
     }
 
     .hero-actions {
@@ -3358,6 +3393,31 @@ html {
     .project-title {
         font-size: 2rem !important;
         text-align: center;
+    }
+
+    /* Project Highlights Mobile */
+    .project-highlight-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .highlight-label {
+        font-size: 0.8rem;
+    }
+
+    .highlight-value {
+        font-size: 0.85rem;
+    }
+
+    /* Project Overview Mobile */
+    .overview-card {
+        padding: 1.5rem !important;
+    }
+
+    .overview-text {
+        font-size: 1rem;
+        text-align: left;
     }
 
     .section-title {
