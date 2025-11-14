@@ -91,11 +91,11 @@ function Header() {
                             <li className="nav-item">
                                 <button
                                     onClick={handleBackToProjects}
-                                    className="nav-link back-to-projects btn btn-link"
-                                    style={{ cursor: "pointer" }}
+                                    className="back-to-projects"
+                                    aria-label="Navigate back to projects section"
                                 >
-                                    <i className="bi bi-arrow-left me-2"></i>
-                                    Back to Projects
+                                    <i className="bi bi-arrow-left"></i>
+                                    <span className="back-text">Back to Projects</span>
                                 </button>
                             </li>
                         ) : (

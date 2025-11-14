@@ -9,7 +9,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 70%, #334155 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 70%, #334155 100%); /* unified site-wide */
     color: #e5e7eb;
     margin: 0;
     padding: 0;
@@ -20,8 +20,48 @@ section {
 }
 
 /* =========================
-   Global Button Styles
+   Buttons
    ========================= */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-outline-light:hover,
+.btn-outline-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Back Button (Project Details) */
+.back-btn {
+    border: 2px solid #ffffffcc;
+    color: #ffffffcc;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    background-color: #ffffff;
+}
+
+/* Button Enhancements */
 .btn-primary {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     border: none;
@@ -53,12 +93,6 @@ section {
     transition: all 0.3s ease;
 }
 
-.btn-outline-light:hover,
-.btn-outline-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-}
-
 .btn-outline-light:hover {
     background: rgba(59, 130, 246, 0.1);
     border-color: #3b82f6;
@@ -67,7 +101,7 @@ section {
 
 
 /* ====================================
-   HEADER STYLES - NAVBAR
+   HEADER STYLES -NAVBAR
    ==================================== */
 
 /* Base Navbar Styles */
@@ -145,7 +179,6 @@ section {
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     overflow: hidden;
-    cursor: pointer;
 }
 
 .nav-text {
@@ -216,7 +249,7 @@ section {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-/* Custom Mobile Toggler */
+/* Custom Toggler */
 .navbar-toggler {
     border: none;
     padding: 0.25rem 0.5rem;
@@ -252,70 +285,21 @@ section {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Back to Projects Button */
+/* Back to Projects Link */
 .back-to-projects {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(59, 130, 246, 0.1);
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     font-weight: 500;
-    padding: 0.6rem 1.2rem;
+    padding: 0.75rem 1rem !important;
     border-radius: 0.5rem;
-    border: 1px solid rgba(59, 130, 246, 0.3);
     transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
-
-.back-to-projects i {
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .back-to-projects:hover {
-    background: rgba(59, 130, 246, 0.2);
+    color: #ffffff !important;
+    background: rgba(59, 130, 246, 0.1);
     border-color: rgba(59, 130, 246, 0.5);
     transform: translateX(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-}
-
-.back-to-projects:hover i {
-    transform: translateX(-2px);
-}
-
-.back-to-projects:active {
-    transform: translateX(-1px) scale(0.98);
-}
-
-/* Mobile Responsive - Back Button */
-@media (max-width: 768px) {
-    .back-to-projects {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-        width: auto;
-        justify-content: center;
-    }
-
-    .back-to-projects .back-text {
-        display: inline;
-    }
-}
-
-@media (max-width: 480px) {
-    .back-to-projects {
-        padding: 0.5rem 0.9rem;
-        font-size: 0.85rem;
-    }
-    
-    .back-to-projects .back-text {
-        display: none;
-    }
-
-    .back-to-projects i {
-        font-size: 1.1rem;
-        margin: 0;
-    }
 }
 
 /* ====================================
