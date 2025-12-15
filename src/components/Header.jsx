@@ -4,7 +4,6 @@ import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("intro");
     const location = useLocation();
     const navigate = useNavigate();
@@ -21,7 +20,6 @@ function Header() {
 
     const handleBackToProjects = () => {
         navigate("/", { state: { scrollTo: "projects" } });
-        setMenuOpen(false);
     };
 
     const handleNavClick = (scrollTarget) => {
@@ -33,7 +31,6 @@ function Header() {
             });
             setActiveSection(scrollTarget);
         }
-        setMenuOpen(false);
     };
 
     // Mobile navigation sections with icons
@@ -59,7 +56,6 @@ function Header() {
                         <RouterLink
                             to="/"
                             className="navbar-brand"
-                            onClick={() => setMenuOpen(false)}
                         >
                             <span className="brand-text">Mohamed Ijas</span>
                             <div className="brand-underline"></div>
@@ -123,7 +119,6 @@ function Header() {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="dropdown-item"
-                                                        onClick={() => setMenuOpen(false)}
                                                     >
                                                         <i className="bi bi-linkedin"></i>
                                                         <span>LinkedIn</span>
@@ -133,7 +128,6 @@ function Header() {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="dropdown-item"
-                                                        onClick={() => setMenuOpen(false)}
                                                     >
                                                         <i className="bi bi-github"></i>
                                                         <span>GitHub</span>
@@ -141,7 +135,6 @@ function Header() {
                                                     <a
                                                         href="mailto:mdijas555@gmail.com"
                                                         className="dropdown-item"
-                                                        onClick={() => setMenuOpen(false)}
                                                     >
                                                         <i className="bi bi-envelope"></i>
                                                         <span>Email</span>
@@ -157,7 +150,6 @@ function Header() {
                                     href="/MohamedResume.pdf"
                                     target="_blank"
                                     className="btn nav-resume-btn"
-                                    onClick={() => setMenuOpen(false)}
                                 >
                                     <span>Resume</span>
                                     <i className="bi bi-eye ms-2"></i>
