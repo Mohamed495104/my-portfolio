@@ -4,7 +4,6 @@ import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState("intro");
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -29,7 +28,6 @@ function Header() {
                 duration: 200,
                 offset: -80,
             });
-            setActiveSection(scrollTarget);
         }
     };
 
@@ -201,7 +199,8 @@ function Header() {
                                 duration={200}
                                 spy={true}
                                 offset={-80}
-                                className={`mobile-nav-item ${activeSection === section.id ? "active" : ""}`}
+                                activeClass="active"
+                                className="mobile-nav-item"
                                 onClick={() => handleNavClick(section.id)}
                             >
                                 <i className={`bi ${section.icon} mobile-nav-icon`}></i>
