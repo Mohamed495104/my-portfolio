@@ -2679,13 +2679,136 @@ section {
 }
 
 /* ====================================
-   FOOTER SECTION STYLES
+   MOBILE NAVIGATION (Instagram-like)
+   ==================================== */
+
+/* Mobile Top Navbar */
+.mobile-top-navbar {
+    padding: 0.75rem 0;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Instagram-like Bottom Navigation */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.5rem 0;
+    z-index: 1040;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.5s ease-out;
+}
+
+.mobile-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    min-width: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.mobile-nav-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+/* Active State */
+.mobile-nav-item.active {
+    color: #3b82f6;
+}
+
+.mobile-nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
+    animation: expandWidth 0.3s ease-out;
+}
+
+.mobile-nav-item.active .mobile-nav-icon {
+    transform: scale(1.1);
+}
+
+.mobile-nav-item.active .mobile-nav-label {
+    font-weight: 600;
+}
+
+/* Hover Effect */
+.mobile-nav-item:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Add padding bottom to body when mobile nav is present */
+@media (max-width: 991.98px) {
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* ====================================
+   PREMIUM FOOTER SECTION STYLES
    ==================================== */
 
 .footer-section {
     position: relative;
-    background: transparent;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 1) 100%);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+    overflow: hidden;
+}
 
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+}
+
+/* Footer Main Content */
+.footer-main {
+    position: relative;
+    z-index: 2;
 }
 
 /* Footer Brand */
@@ -2695,168 +2818,221 @@ section {
 
 .footer-logo {
     font-size: 2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #10b981 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: 1rem;
 }
 
 .footer-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 400px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 350px;
 }
 
-/* Footer Social Links */
-.footer-social {
-    animation: fadeIn 1s ease-out 0.3s both;
+/* Social Links */
+.footer-social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
-.footer-social-link {
-    width: 50px;
-    height: 50px;
+.footer-social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
 }
 
-.footer-social-link:hover {
-    transform: translateY(-3px);
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
+.footer-social-icon:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(16, 185, 129, 0.2));
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
 }
 
-.footer-social-link[data-social="email"]:hover {
-    border-color: #ea4335;
-    color: #ea4335;
+/* Section Titles */
+.footer-section-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
 }
 
-.footer-social-link[data-social="linkedin"]:hover {
-    border-color: #0077b5;
-    color: #0077b5;
-}
-
-.footer-social-link[data-social="github"]:hover {
-    border-color: #6cc644;
-    color: #6cc644;
+.footer-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
 }
 
 /* Footer Links */
-.footer-links {
-    animation: fadeInUp 1s ease-out 0.2s both;
-}
-
-.footer-links-title {
-    font-size: 1.25rem;
-    color: #ffffff;
+.footer-links-list {
+    list-style: none;
+    padding: 0;
 }
 
 .footer-link {
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #3b82f6 !important;
-    text-decoration: none;
+    color: #3b82f6;
     padding-left: 8px;
 }
 
 .footer-link-icon {
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
     transition: transform 0.3s ease;
-    font-size: 0.8rem;
 }
 
 .footer-link:hover .footer-link-icon {
     transform: translateX(4px);
 }
 
-/* Footer CTA */
-.footer-cta {
-    animation: fadeInUp 1s ease-out 0.4s both;
+/* Contact Info */
+.footer-contact-info {
+    font-size: 0.9rem;
 }
 
-.footer-cta-title {
-    font-size: 1.25rem;
-    color: #ffffff;
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
 }
 
-.footer-cta-btn {
+.footer-contact-item i {
+    font-size: 1rem;
+    color: #3b82f6;
+    margin-right: 0.75rem;
+}
+
+.footer-contact-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-contact-link:hover {
+    color: #3b82f6;
+}
+
+.footer-contact-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Back to Top Button */
+.footer-back-to-top {
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, #3b82f6, #10b981);
-    color: white;
     border: none;
-    border-radius: 12px;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.footer-cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
     color: white;
-    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.footer-scroll-top {
-    border-radius: 8px;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.footer-scroll-top:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+.footer-back-to-top:hover {
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
 }
 
 /* Footer Bottom */
 .footer-bottom {
-    animation: fadeIn 1s ease-out 0.6s both;
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
 }
 
-.footer-bottom-divider {
+.footer-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    margin-bottom: 1.5rem;
 }
 
 .footer-copyright,
-.footer-tech {
-    font-size: 0.9rem;
+.footer-credits {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-/* Footer Background Effect */
-.footer-bg-effect {
+.footer-copyright i,
+.footer-credits i {
+    margin: 0 0.25rem;
+}
+
+/* Background Gradient */
+.footer-bg-gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
     z-index: 1;
+    pointer-events: none;
 }
 
-.footer-section > .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Footer Email Styling */
-.footer-email {
-    transition: opacity 0.3s ease;
-}
-
-.footer-email:hover {
-    opacity: 1 !important;
-    color: #ffffff !important;
+/* Footer Responsive */
+@media (max-width: 991.98px) {
+    .footer-section {
+        padding: 3rem 0 1.5rem;
+        margin-bottom: 80px; /* Account for mobile bottom nav */
+    }
+    
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-description {
+        margin: 0 auto 1.5rem;
+    }
+    
+    .footer-social-links {
+        justify-content: center;
+    }
+    
+    .footer-section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-back-to-top {
+        margin: 0 auto;
+    }
 }
 
 /* Smooth scroll behavior */
