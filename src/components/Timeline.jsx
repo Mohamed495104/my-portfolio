@@ -21,11 +21,11 @@ const Timeline = () => {
             period: 'Oct 2023 - Aug 2024',
             location: 'Chennai, India',
             description: [
-                'Led 2nd-level support and proactive monitoring for enterprise applications, ensuring high system performance and reliability.',
-                'Resolved complex incidents by collaborating with development teams to deliver permanent fixes, bug resolutions, and production deployments.',
-                'Conducted root cause analysis (RCA) for recurring issues and validated business fixes via UAT.',
-                'Mentored junior team members, fostering knowledge sharing and Agile/Scrum best practices.',
-                'Maintained detailed incident/change documentation, driving continuous system improvement.'
+                'Accelerated Incident Resolution by 15% on average, consistently resolving 95%+ of issues before crossing stringent Service Level Agreements (SLAs) through proactive monitoring of incidents and provided on-time response.',
+                'Reduced API Response Latency by 20% by collaborating with development teams to improve performance of core API calls for data retrieval, significantly accelerating the dealer management platform.',
+                'Secured access for 300+ internal and external users by administering SAP GRC role-based access control to the system, ensuring continuous compliance.',
+                'Conducted in-depth Root Cause Analysis (RCA) on recurring issues, leading to the implementation of permanent code fixes and performing UAT/functional validation to secure deployment quality.',
+                'Mentored and assisted junior team members in incidents on-time and ensuring high-performance delivery within Agile/Scrum methodologies.'
             ],
             skills: ['Problem Solving', 'Mentorship', 'Leadership','User Acceptance Test','Root Cause Analysis','Bug Fixes','Cross-Team Collaboration','Agile Workflow'],
             icon: '💼'
@@ -37,11 +37,11 @@ const Timeline = () => {
             period: 'Sept 2021 - Aug 2023',
             location: 'Chennai, India',
             description: [
-                'Monitored application performance and ensured stable day-to-day operations.',
-                'Managed full incident lifecycle: triage, prioritization, communication, and resolution.',
-                'Provided end-user support, improving adoption of application features.',
-                'Maintained documentation of incidents, changes, and fixes for transparency.',
-                'Assisted in bug fixes, production deployments, and release documentation.'
+                'Accelerated Incident Resolution by 15% on average, consistently resolving 95%+ of issues before crossing stringent Service Level Agreements (SLAs) through proactive monitoring of incidents and provided on-time response.',
+                'Managed incident resolution lifecycle, including initial response, prioritization, communication, and timely resolution for business users.',
+                'Performed UAT and functional validation for bug fixes in SAP backend system and executed manual testing before production deployment.',
+                'Contributed to system stability by performing real-time application performance monitoring and executing patch updates across distributed environments to avoid downtime.',
+                'Identified and documented root causes for recurring critical issues, enabling proactive mitigation strategies and helped reducing repeat incidents by standardizing post-incident reviews.'
             ],
             skills: ['Problem Solving', 'Enterprise Systems', 'Application Support','User Acceptance Test','Team Collaboration','Agile','ServiceNow'],
             icon: '💼'

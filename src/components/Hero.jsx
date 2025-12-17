@@ -20,16 +20,14 @@ function Intro() {
 
                             {/* Role */}
                             <h2 className="hero-role mb-5">
-                                <span className="role-text">Full-Stack Developer</span>
+                                <span className="role-text">Full-Stack Engineer | Software Developer</span>
                                 <div className="role-underline"></div>
                             </h2>
 
                             {/* Description */}
                             <div className="hero-description mb-5">
                                 <p className="description-text">
-                                    Full-Stack Developer specializing in the MERN stack — building <span className="text-info fw-semibold">scalable</span>,
-                                    <span className="text-success fw-semibold"> user-focused</span> Web & Mobile applications. Currently advancing cloud & modern development skills at Conestoga College,
-                                    while creating projects that combine performance, clean code, and real-world impact
+                                    A <span className="text-info fw-semibold">Full-stack Engineer</span> - With experience working on real-world projects, building software with clarity and care using modern <span className="text-success fw-semibold">Full-stack and AI tools</span> thoughtfully to create software with real, long term value.
                                 </p>
                             </div>
 
@@ -46,7 +44,7 @@ function Intro() {
                                     <i className="bi bi-arrow-right"></i>
                                 </Link>
                                 <a
-                                    href="/MohamedResume.pdf"
+                                    href="/Mohamed%20Ijas%20-%20Software%20Engineer.pdf"
                                     download
                                     className="btn hero-btn-secondary"
                                 >

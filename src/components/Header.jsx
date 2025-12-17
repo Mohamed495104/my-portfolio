@@ -158,7 +158,7 @@ function Header() {
                         )}
                         <li className="nav-item">
                             <a
-                                href="/MohamedResume.pdf"
+                                href="/Mohamed%20Ijas%20-%20Software%20Engineer.pdf"
                                 target="_blank"
                                 className="btn nav-resume-btn"
                                 onClick={() => setMenuOpen(false)}

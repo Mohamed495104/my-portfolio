@@ -38,8 +38,7 @@ function About() {
                                     fontWeight: '400',
                                     lineHeight: '1.7'
                                 }}>
-                                    Hi, I'm a <strong className="text-white">Full Stack Developer</strong> with prior experience as a Systems Engineer at Infosys, where I gained foundational experience in system troubleshooting, performance optimization,customer engagement and client-focused IT solutions.
-                                </p>
+                                    Hi, I'm a <strong className="text-white">Full Stack Engineer</strong> with prior experience as a Systems Engineer at Infosys working on real world projects, focused on building clear, reliable, and user-focused software solutions.    </p>
 
                                 <p className="about-description lh-lg mb-4" style={{
                                     fontSize: '1.125rem',
@@ -47,16 +46,7 @@ function About() {
                                     fontWeight: '400',
                                     lineHeight: '1.7'
                                 }}>
-                                    Skilled in Agile SDLC, Scrum workflows, and cross-team collaboration, I bring combining enterprise experience with modern web development to build applications that are scalable, functional, and user-friendly.
-                                </p>
-
-                                <p className="about-description lh-lg mb-0" style={{
-                                    fontSize: '1.125rem',
-                                    color: 'rgba(255, 255, 255, 0.9)',
-                                    fontWeight: '400',
-                                    lineHeight: '1.7'
-                                }}>
-                                    Currently, I'm pursuing a <strong className="text-white">Postgraduate Degree in Web Development</strong> at Conestoga College, specializing in the <span className="text-info fw-semibold">MERN stack</span> (MongoDB, Express.js, React.js, Node.js) along with REST APIs, AWS, and Firebase, with a strong focus on creating user-focused, high-performing applications.
+                                    With a strong foundation in Agile development and cross-team collaboration, I bring enterprise experience into modern software engineering-building scalable, high-quality solutions using modern web and AI tools thoughtfully. I’m driven by creating software that delivers real value and stands the test of time.
                                 </p>
                             </div>
                         </div>
