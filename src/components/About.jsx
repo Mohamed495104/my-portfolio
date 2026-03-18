@@ -9,7 +9,7 @@ function About() {
                     <div className="col-lg-4 text-center">
                         <div className="about-image-wrapper position-relative">
                             <img
-                                src="/images/profile.jpg"
+                                src="/images/profile.jpeg"
                                 alt="Ijas - Profile"
                                 className="about-profile-img img-fluid rounded-4 shadow-lg"
                                 style={{
