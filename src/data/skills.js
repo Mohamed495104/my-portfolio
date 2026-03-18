@@ -2,19 +2,14 @@
 const skills = {
     frontend: [
         {
-            name: "HTML5",
-            icon: "bi bi-filetype-html",
-            color: "#e34c26",
-        },
-        {
-            name: "CSS3",
-            icon: "bi bi-filetype-css",
-            color: "#1572b6",
-        },
-        {
             name: "JavaScript",
             icon: "bi bi-filetype-js",
             color: "#f7df1e",
+        },
+        {
+            name: "TypeScript",
+            icon: "bi bi-filetype-tsx",
+            color: "#3178C6",
         },
         {
             name: "React",
@@ -24,22 +19,22 @@ const skills = {
         {
             name: "Next.js",
             icon: "bi bi-box-seam",
-            color: "#000000",
+            color: "#ffffff",
+        },
+        {
+            name: "Responsive Design",
+            icon: "bi bi-phone-landscape",
+            color: "#38bdf8",
+        },
+        {
+            name: "SEO",
+            icon: "bi bi-search",
+            color: "#34d399",
         },
         {
             name: "Bootstrap",
             icon: "bi bi-bootstrap-fill",
             color: "#7952B3",
-        },
-        {
-            name: "Flutter",
-            icon: "bi bi-phone",
-            color: "#02569B",
-        },
-        {
-            name: "Figma",
-            icon: "figma",
-            color: "#F24E1E",
         },
     ],
 
@@ -52,12 +47,7 @@ const skills = {
         {
             name: "Express.js",
             icon: "bi bi-hdd-network",
-            color: "#000000"
-        },
-        {
-            name: "Java",
-            icon: "bi bi-cup-hot",
-            color: "#007396"
+            color: "#aaaaaa"
         },
         {
             name: "Python",
@@ -65,7 +55,12 @@ const skills = {
             color: "#3776AB"
         },
         {
-            name: "REST API",
+            name: "Java",
+            icon: "bi bi-cup-hot",
+            color: "#007396"
+        },
+        {
+            name: "REST APIs",
             icon: "bi bi-arrow-left-right",
             color: "#ff6b6b"
         },
@@ -75,14 +70,14 @@ const skills = {
             color: "#E10098"
         },
         {
-            name: "JWT",
-            icon: "bi bi-shield-lock",
-            color: "#000000"
+            name: "Microservices",
+            icon: "bi bi-diagram-3",
+            color: "#f59e0b"
         },
         {
-            name: "OAuth2",
-            icon: "bi bi-key",
-            color: "#4285F4"
+            name: "SQL",
+            icon: "bi bi-table",
+            color: "#00758F"
         },
     ],
 
@@ -93,19 +88,67 @@ const skills = {
             color: "#4db33d"
         },
         {
-            name: "Firebase",
-            icon: "bi bi-cloud-fill",
-            color: "#FFCA28"
-        },
-        {
             name: "MySQL",
             icon: "bi bi-database",
             color: "#00758F"
         },
         {
-            name: "SQL Server",
-            icon: "bi bi-server",
-            color: "#CC2927"
+            name: "Firebase",
+            icon: "bi bi-cloud-fill",
+            color: "#FFCA28"
+        },
+        {
+            name: "ChromaDB",
+            icon: "bi bi-grid-1x2-fill",
+            color: "#e879f9"
+        },
+    ],
+
+    aiml: [
+        {
+            name: "RAG",
+            icon: "bi bi-layers-fill",
+            color: "#a78bfa"
+        },
+        {
+            name: "Prompt Engineering",
+            icon: "bi bi-chat-dots-fill",
+            color: "#34d399"
+        },
+        {
+            name: "LLM Fine-tuning",
+            icon: "bi bi-sliders",
+            color: "#f472b6"
+        },
+        {
+            name: "OpenAI API",
+            icon: "bi bi-robot",
+            color: "#10b981"
+        },
+        {
+            name: "Hugging Face",
+            icon: "bi bi-emoji-smile-fill",
+            color: "#fbbf24"
+        },
+        {
+            name: "VectorDB",
+            icon: "bi bi-boxes",
+            color: "#818cf8"
+        },
+        {
+            name: "GitHub Copilot",
+            icon: "bi bi-github",
+            color: "#e2e8f0"
+        },
+        {
+            name: "Google Gemini",
+            icon: "bi bi-stars",
+            color: "#4285F4"
+        },
+        {
+            name: "Google Colab",
+            icon: "bi bi-play-circle-fill",
+            color: "#F9AB00"
         },
     ],
 
@@ -118,7 +161,7 @@ const skills = {
         {
             name: "GitHub",
             icon: "bi bi-github",
-            color: "#181717"
+            color: "#e2e8f0"
         },
         {
             name: "GitLab",
@@ -126,19 +169,9 @@ const skills = {
             color: "#FC6D26"
         },
         {
-            name: "GitHub Actions",
-            icon: "bi bi-arrow-repeat",
-            color: "#2088FF"
-        },
-        {
             name: "Docker",
             icon: "bi bi-box-seam",
             color: "#2496ED"
-        },
-        {
-            name: "Kubernetes",
-            icon: "bi bi-grid-3x3",
-            color: "#326CE5"
         },
         {
             name: "AWS",
@@ -146,9 +179,19 @@ const skills = {
             color: "#FF9900"
         },
         {
-            name: "WebStorm",
-            icon: "bi bi-code-square",
-            color: "#00CDD7"
+            name: "Vercel",
+            icon: "bi bi-triangle-fill",
+            color: "#e2e8f0"
+        },
+        {
+            name: "DigitalOcean",
+            icon: "bi bi-droplet-fill",
+            color: "#0080FF"
+        },
+        {
+            name: "Figma",
+            icon: "figma",
+            color: "#F24E1E",
         },
     ],
 

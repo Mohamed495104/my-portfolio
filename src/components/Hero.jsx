@@ -44,7 +44,7 @@ function Intro() {
                                     <i className="bi bi-arrow-right"></i>
                                 </Link>
                                 <a
-                                    href="/Mohamed%20Ijas%20-%20Software%20Engineer.pdf"
+                                    href="/Mohamed%20Ijas%20-%20Software%20Developer.pdf"
                                     download
                                     className="btn hero-btn-secondary"
                                 >

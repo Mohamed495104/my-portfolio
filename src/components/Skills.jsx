@@ -3,7 +3,7 @@ import skills from "../data/skills";
 import { SiGraphql, SiFigma } from "react-icons/si";
 
 function Skills() {
-    const [activeCategory, setActiveCategory] = useState("frontend");
+    const [activeCategory, setActiveCategory] = useState("aiml");
 
     const renderIcon = (skill) => {
         if (skill.icon === "graphql")
@@ -19,6 +19,7 @@ function Skills() {
     };
 
     const categories = [
+        { key: "aiml", name: "AI / ML", icon: "bi-robot", color: "#a78bfa" },
         { key: "frontend", name: "Frontend", icon: "bi-code-slash", color: "#3b82f6" },
         { key: "backend", name: "Backend", icon: "bi-server", color: "#10b981" },
         { key: "database", name: "Database", icon: "bi-database", color: "#f59e0b" },
